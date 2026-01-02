@@ -34,18 +34,15 @@
     a{color:inherit}
     .wrap{max-width:var(--max); margin:0 auto; padding:24px;}
     .topbar{
-      display:flex; align-items:center; justify-content:space-between;
+      display:flex; align-items:flex-start; justify-content:space-between;
       gap:16px; padding:12px 0 6px;
     }
-    .brand{
-      display:flex; flex-direction:column; gap:4px;
-    }
+    .brand{display:flex; flex-direction:column; gap:4px;}
     .brand .line1{
       font-weight:900; letter-spacing:.2px;
       color:var(--gold);
       font-size: clamp(22px, 3.2vw, 34px);
       line-height:1.05;
-      text-transform:none;
     }
     .brand .line2{
       color:var(--gold);
@@ -57,6 +54,7 @@
 
     .nav{
       display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+      margin-top:4px;
     }
     .pill{
       border:1px solid var(--border);
@@ -69,133 +67,12 @@
       font-size:13px;
     }
     .pill:hover{border-color:rgba(255,255,255,.22)}
-    .hero{
-      margin-top:14px;
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:22px;
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.35fr .65fr;
-      gap:18px;
-      align-items:stretch;
-    }
     @media (max-width: 860px){
-      .hero-grid{grid-template-columns:1fr}
       .nav{justify-content:flex-start}
-    }
-    .kicker{
-      color:var(--muted);
-      margin:10px 0 0;
-      font-size:14px;
-    }
-    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px;}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 14px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.05);
-      text-decoration:none;
-      font-weight:800;
-      letter-spacing:.2px;
-    }
-    .btn:hover{border-color:rgba(255,255,255,.22)}
-    .btn.primary{
-      background:var(--pink);
-      border-color:transparent;
-      color:#0b0b0d;
-      box-shadow:0 14px 35px rgba(238,70,153,.25);
-    }
-    .btn.primary:hover{filter:brightness(1.03)}
-    .card{
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.04);
-      border-radius:var(--radius);
-      padding:16px;
-    }
-    .card h3{margin:0 0 8px; font-size:16px}
-    .meta{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:10px;
-    }
-    .meta .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
-    .tag{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(0,0,0,.22);
-      font-weight:700;
-      font-size:13px;
-      color:var(--text);
-    }
-    .dot{
-      width:8px; height:8px; border-radius:50%;
-      background:var(--pink);
-      display:inline-block;
+      .topbar{flex-direction:column}
     }
 
-    h2{
-      margin:26px 0 12px;
-      font-size:22px;
-      letter-spacing:.2px;
-    }
-    .grid-2{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:14px;
-    }
-    @media (max-width: 860px){ .grid-2{grid-template-columns:1fr} }
-    .muted{color:var(--muted)}
-    ul{margin:10px 0 0 18px}
-    li{margin:6px 0}
-
-    .callout{
-      border-left:4px solid var(--pink);
-      padding:12px 12px;
-      background:rgba(238,70,153,.08);
-      border-radius:12px;
-      margin:10px 0 0;
-    }
-
-    .pay-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-      margin-top:12px;
-    }
-    @media (max-width: 700px){ .pay-grid{grid-template-columns:1fr} }
-
-    .pay-item{
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:12px;
-      background:rgba(255,255,255,.035);
-    }
-    .pay-item b{display:block; margin-bottom:4px}
-    code{
-      background:rgba(0,0,0,.28);
-      border:1px solid rgba(255,255,255,.10);
-      padding:3px 6px;
-      border-radius:8px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      font-size: 0.95em;
-    }
-
-    .footer{
-      margin:26px 0 8px;
-      padding:18px 0;
-      border-top:1px solid var(--border);
-      color:var(--muted);
-      font-size:13px;
-    }
-    .small{font-size:13px}
-    .hr{height:1px;background:var(--border); margin:14px 0}
+    /* Placeholder banner (for logo/photo later) */
     .banner{
       height:180px;
       border-radius:16px;
@@ -220,6 +97,113 @@
       border-radius:999px;
       font-size:13px;
     }
+
+    .hero{
+      margin-top:14px;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    @media (max-width: 860px){
+      .hero-grid{grid-template-columns:1fr}
+    }
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:10px;
+    }
+    .tag{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.22);
+      font-weight:700;
+      font-size:13px;
+      color:var(--text);
+    }
+    .dot{width:8px; height:8px; border-radius:50%; background:var(--pink); display:inline-block;}
+
+    .kicker{
+      color:var(--muted);
+      margin:10px 0 0;
+      font-size:14px;
+    }
+
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:850;
+      letter-spacing:.2px;
+      background:var(--pink);
+      color:#ffffff;
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 14px 35px rgba(238,70,153,.18);
+    }
+    .btn:hover{filter:brightness(1.05)}
+    .btn:active{transform:translateY(1px)}
+    .btn.secondary{
+      background:var(--pink);
+      color:#ffffff;
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 14px 35px rgba(238,70,153,.18);
+    }
+
+    .card{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      border-radius:var(--radius);
+      padding:16px;
+    }
+    .card h3{margin:0 0 8px; font-size:16px}
+
+    h2{
+      margin:26px 0 12px;
+      font-size:22px;
+      letter-spacing:.2px;
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 860px){ .grid-2{grid-template-columns:1fr} }
+
+    .muted{color:var(--muted)}
+    ul{margin:10px 0 0 18px}
+    li{margin:6px 0}
+
+    .callout{
+      border-left:4px solid var(--pink);
+      padding:12px 12px;
+      background:rgba(238,70,153,.08);
+      border-radius:12px;
+      margin:10px 0 0;
+    }
+
+    .hr{height:1px;background:var(--border); margin:14px 0}
+
+    .footer{
+      margin:26px 0 8px;
+      padding:18px 0;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .small{font-size:13px}
   </style>
 </head>
 
@@ -235,11 +219,11 @@
         <a class="pill" href="#details">Event Details</a>
         <a class="pill" href="#register">Registration</a>
         <a class="pill" href="#sponsor">Sponsorship</a>
-        <a class="pill" href="#faq">FAQ</a>
         <a class="pill" href="#contact">Contact</a>
       </nav>
     </div>
 
+    <!-- Placeholder banner for photo/logo -->
     <div class="banner">
       <div class="caption">Swing Fore a Cure • Supporting Real Rats Wear Pink</div>
     </div>
@@ -248,32 +232,21 @@
       <div class="hero-grid">
         <div>
           <div class="meta">
-            <div class="row">
-              <span class="tag"><span class="dot"></span> Saturday, June 6, 2026</span>
-              <span class="tag"><span class="dot"></span> Washtenaw Golf Club</span>
-              <span class="tag"><span class="dot"></span> Shotgun Start: 8:00 AM</span>
-            </div>
-            <div class="row">
-              <span class="tag"><span class="dot"></span> Arrival / Check-In: 7:15 AM</span>
-              <span class="tag"><span class="dot"></span> 2955 Packard Rd</span>
-              <span class="tag"><span class="dot"></span> No breakfast provided</span>
-            </div>
+            <span class="tag"><span class="dot"></span> Saturday, June 6, 2026</span>
+            <span class="tag"><span class="dot"></span> Washtenaw Golf Club</span>
+            <span class="tag"><span class="dot"></span> 2955 Packard Rd, Ann Arbor, MI</span>
           </div>
 
           <p class="kicker">
-            Join us for a morning on the course — and an evening of dinner, silent auction, and community —
+            Join us for a day on the course — followed by dinner, silent auction, and community —
             all supporting the mission of <b>Real Rats Wear Pink</b> through Relay For Life.
           </p>
 
           <div class="cta-row">
-            <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScDmAdsJKp8QlQR-1TWOnvagvNYOATRi3m32Z1vI0nkIkIFag/viewform?usp=header" target="_blank" rel="noopener">Register Golfers</a>
+            <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScDmAdsJKp8QlQR-1TWOnvagvNYOATRi3m32Z1vI0nkIkIFag/viewform?usp=header" target="_blank" rel="noopener">Register Golfers</a>
             <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSczXtwWnl1qqaMID6NLOGPlMbmeLVYxHGo8xrCISKPEfDmCqg/viewform?usp=header" target="_blank" rel="noopener">Become a Sponsor</a>
             <a class="btn" href="http://main.acsevents.org/goto/realratswearpink" target="_blank" rel="noopener">Donate</a>
           </div>
-
-          <p class="muted small" style="margin-top:10px">
-            Questions? Email <a href="mailto:realratswearpink@gmail.com">realratswearpink@gmail.com</a>
-          </p>
         </div>
 
         <aside class="card" aria-label="Quick summary">
@@ -284,12 +257,6 @@
             <li>Dinner + 2-hour open bar</li>
             <li>Contests, prizes, silent auction</li>
           </ul>
-          <div class="hr"></div>
-          <h3>Address</h3>
-          <div class="muted small">
-            Washtenaw Golf Club<br />
-            2955 Packard Rd
-          </div>
         </aside>
       </div>
     </section>
@@ -318,12 +285,8 @@
           <ul class="muted">
             <li>Arrival time: <b>7:15 AM</b> (no breakfast provided)</li>
             <li>Shotgun start: <b>8:00 AM</b></li>
-            <li>Contact: <a href="mailto:realratswearpink@gmail.com">realratswearpink@gmail.com</a></li>
+            <li>Address: <b>2955 Packard Rd, Ann Arbor, MI</b></li>
           </ul>
-          <p class="muted small">
-            Want to add sponsor logos or a photo banner? You can upload images to your repo and replace the
-            banner background (top) later.
-          </p>
         </div>
       </div>
     </section>
@@ -340,96 +303,40 @@
           <p class="muted">
             Registration includes 18 holes of golf, cart, lunch, dinner, contests, prizes, and participation in the silent auction.
           </p>
+          <p class="muted small">
+            Payment instructions are included inside the registration form.
+          </p>
           <div class="cta-row">
-            <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScDmAdsJKp8QlQR-1TWOnvagvNYOATRi3m32Z1vI0nkIkIFag/viewform?usp=header" target="_blank" rel="noopener">Open Golfer Registration</a>
+            <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScDmAdsJKp8QlQR-1TWOnvagvNYOATRi3m32Z1vI0nkIkIFag/viewform?usp=header" target="_blank" rel="noopener">Open Golfer Registration</a>
           </div>
         </div>
 
         <div class="card">
-          <h3>Payment Options</h3>
-          <p class="muted small" style="margin-top:0">
-            <b>Preferred (helps reduce fees):</b>
+          <h3>Sponsorship</h3>
+          <p class="muted">
+            Sponsor packages help fund the outing and amplify the impact of Real Rats Wear Pink.
+            Sponsors can also support the silent auction or donate an in-kind item.
           </p>
-
-          <div class="pay-grid">
-            <div class="pay-item">
-              <b>Cash App</b>
-              <span class="muted">Send to: <code>$RRWP</code></span>
-            </div>
-            <div class="pay-item">
-              <b>PayPal</b>
-              <span class="muted">Send to: <code>@RRWP7</code></span>
-            </div>
-            <div class="pay-item">
-              <b>Venmo</b>
-              <span class="muted">Send to: <code>@cancer-sucks</code></span>
-            </div>
-            <div class="pay-item">
-              <b>Zelle</b>
-              <span class="muted">Send to: <code>mazenblue77@gmail.com</code></span>
-            </div>
+          <div class="cta-row">
+            <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSczXtwWnl1qqaMID6NLOGPlMbmeLVYxHGo8xrCISKPEfDmCqg/viewform?usp=header" target="_blank" rel="noopener">Open Sponsorship Form</a>
           </div>
-
-          <div class="callout">
-            <b>Credit Card (last resort)</b><br />
-            <span class="muted">
-              Please donate the total via our team page:
-              <a href="http://main.acsevents.org/goto/realratswearpink" target="_blank" rel="noopener">main.acsevents.org/goto/realratswearpink</a>
-            </span>
-          </div>
-
-          <p class="muted small">
-            After you pay, please upload a screenshot/receipt in the registration form.
+          <p class="muted small" style="margin-top:10px">
+            We’ll follow up after submission to confirm recognition/signage details.
           </p>
         </div>
       </div>
     </section>
 
     <section id="sponsor">
-      <h2>Sponsorship</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Become a Sponsor</h3>
-          <p class="muted">
-            Sponsor packages help fund the outing and amplify the impact of Real Rats Wear Pink.
-            Sponsors may also choose to support the silent auction or donate an in-kind item.
-          </p>
-          <div class="cta-row">
-            <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSczXtwWnl1qqaMID6NLOGPlMbmeLVYxHGo8xrCISKPEfDmCqg/viewform?usp=header" target="_blank" rel="noopener">Open Sponsorship Form</a>
-          </div>
-          <p class="muted small">
-            We’ll follow up after submission to confirm recognition/signage details and collect any additional info needed.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Thank Our Sponsors</h3>
-          <p class="muted small">
-            (You can add a sponsor logo grid here later.)
-          </p>
-          <ul class="muted">
-            <li>Upload sponsor logos into your repo (e.g., <code>/assets/sponsors/</code>)</li>
-            <li>Add a simple logo grid section on this page</li>
-            <li>We can format it in a clean 3–4 column layout when you’re ready</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq">
-      <h2>FAQ</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Can I register individually?</h3>
-          <p class="muted">
-            Yes — individual golfers can register. If you’d like to be paired with others, select the option in the registration form.
-          </p>
-        </div>
-        <div class="card">
-          <h3>How do you confirm payment?</h3>
-          <p class="muted">
-            Please upload proof of payment (screenshot/receipt) in the form. Our response sheet flags missing proof automatically.
-          </p>
+      <h2>Sponsorship Details</h2>
+      <div class="card">
+        <p class="muted" style="margin-top:0">
+          Interested in sponsoring Swing Fore a Cure? Use the sponsorship form to select your package and provide your recognition name.
+          Our team will contact you if we need any additional details (logo, golfer names, signage preferences, etc.).
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSczXtwWnl1qqaMID6NLOGPlMbmeLVYxHGo8xrCISKPEfDmCqg/viewform?usp=header" target="_blank" rel="noopener">Sponsor This Event</a>
+          <a class="btn" href="http://main.acsevents.org/goto/realratswearpink" target="_blank" rel="noopener">Donate Instead</a>
         </div>
       </div>
     </section>
